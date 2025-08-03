@@ -3,26 +3,26 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-// Import all pages
-import Frontpage from './pages/Frontpage'
-import Login from './pages/Login'
-import Signup from './pages/Signup'
-import Feed from './pages/Feed'
-import Explore from './pages/Explore'
-import Notification from './pages/Notification'
-import Message from './pages/Message'
-import Profile from './pages/Profile'
-import Post from './pages/Post'
-import Story from './pages/Story'
-import Viewstory from './pages/Viewstory'
-import Settings from './pages/Settings'
-import Helpcentre from './pages/Helpcentre'
-import Admin from './pages/Admin'
+// import Frontpage from './pages/Frontpage'
+// import Login from './pages/Login'
+// import Signup from './pages/Signup'
+// import Feed from './pages/Feed'
+import Explore from './Pages/Explore/Explore'
+// import Notification from './pages/Notification'
+// import Message from './pages/Message'
+// import Profile from './pages/Profile'
+// import Post from './pages/Post'
+// import Story from './pages/Story'
+// import Viewstory from './pages/Viewstory'
+// import Settings from './pages/Settings'
+// import Helpcentre from './pages/Helpcentre'
+// import Admin from './pages/Admin'
 
 function App() {
   return (
     <>
-      <Router>
+    <Explore/>
+      {/* <Router>
       <Routes>
         <Route path="/" element={<Frontpage />} />
         <Route path="/login" element={<Login />} />
@@ -40,8 +40,10 @@ function App() {
         <Route path="/admin" element={<Admin />} />
       </Routes>
     </Router>
-    </>
+     */}
+     </>
   )
+
 }
 
-export default App
+export default App;
