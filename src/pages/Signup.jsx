@@ -1,28 +1,37 @@
 import React, { useState } from 'react';
 import '../assets/styles/Signup.css';
 import signupImage from '../assets/images/signup-bg.jpg';
+import { useNavigate } from 'react-router-dom';
 
 function Signup() {
     const [role, setRole] = useState('user');
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
     const handleSignup = (e) => {
         e.preventDefault();
         console.log('Signing up:', { role, name, email, password });
-        // Add signup logic here
+        // TODO: Integrate signup logic
     };
 
     return (
         <div className="signup-wrapper">
             <div className="signup-left">
-                <img src={signupImage} alt="Signup Visual" />
+                <button className="back-button" onClick={() => navigate('/')}>
+                    ⬅ Back to Home
+                </button>
+                <img src={signupImage} alt="Signup visual" />
+                <div className="signup-message">
+                    <h2>Preserve your story.</h2>
+                    <p>Capture every meaningful moment.</p>
+                </div>
             </div>
 
             <div className="signup-right">
                 <form className="signup-form" onSubmit={handleSignup}>
-                    <h1>Memories</h1>
+                    <h1>Cherish</h1>
                     <h2>Create Account</h2>
 
                     <div className="role-select">
@@ -33,7 +42,7 @@ function Signup() {
                                 checked={role === 'user'}
                                 onChange={() => setRole('user')}
                             />
-                            User
+                            <span>User</span>
                         </label>
                         <label>
                             <input
@@ -42,7 +51,7 @@ function Signup() {
                                 checked={role === 'admin'}
                                 onChange={() => setRole('admin')}
                             />
-                            Admin
+                            <span>Admin</span>
                         </label>
                     </div>
 
