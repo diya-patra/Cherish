@@ -1,0 +1,27 @@
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import '../assets/styles/Menu.css'; // Make sure the CSS file is in the same folder
+
+const Menu = () => {
+  return (
+    <div style={{ width: '220px', minHeight: '100vh', background: '#e6f9ff', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '24px 0', boxSizing: 'border-box', boxShadow: '2px 0 8px rgba(0,122,153,0.08)', transition: 'background 0.4s, box-shadow 0.4s' }}>
+      <div style={{ width: '100%', textAlign: 'center', marginBottom: '18px', background: '#fff', borderRadius: '12px', boxShadow: '0 2px 12px rgba(0,122,153,0.10)', transition: 'background 0.4s, box-shadow 0.3s' }}>
+        <h2 style={{ color: '#007a99', fontFamily: 'Pacifico, cursive', fontSize: '2rem', fontWeight: 'bold', margin: 0, letterSpacing: '2px', transition: 'color 0.3s, textShadow 0.3s' }}>Cherish</h2>
+      </div>
+      <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', marginBottom: '18px', background: '#b3effb', borderRadius: '8px', boxShadow: '0 1px 6px rgba(0,122,153,0.07)', transition: 'boxShadow 0.3s, background 0.3s' }}>
+        <span style={{ fontStyle: 'italic', fontSize: '1.1rem', color: '#007a99', marginBottom: '8px', textAlign: 'center', fontFamily: 'Montserrat, Segoe UI, Arial, sans-serif', letterSpacing: '1px', textShadow: '0 1px 4px #b3effb', transition: 'color 0.3s, textShadow 0.3s' }}>Menu</span>
+        <NavLink to="/" style={{ color: '#007a99', background: '#e6f9ff', textDecoration: 'none', padding: '12px 24px', width: '100%', textAlign: 'center', borderRadius: '8px', fontWeight: 600, fontFamily: 'Montserrat, Segoe UI, Arial, sans-serif', fontSize: '18px', boxShadow: '0 1px 4px rgba(0,122,153,0.07)', cursor: 'pointer', position: 'relative', overflow: 'hidden', transition: 'backgroundColor 0.3s, color 0.3s, boxShadow 0.3s, transform 0.2s, letterSpacing 0.2s' }}>Home</NavLink>
+        <NavLink to="/explore" style={{ color: '#007a99', background: '#e6f9ff', textDecoration: 'none', padding: '12px 24px', width: '100%', textAlign: 'center', borderRadius: '8px', fontWeight: 600, fontFamily: 'Montserrat, Segoe UI, Arial, sans-serif', fontSize: '18px', boxShadow: '0 1px 4px rgba(0,122,153,0.07)', cursor: 'pointer', position: 'relative', overflow: 'hidden', transition: 'backgroundColor 0.3s, color 0.3s, boxShadow 0.3s, transform 0.2s, letterSpacing 0.2s' }}>Explore</NavLink>
+        <NavLink to="/Notification" style={{ color: '#007a99', background: '#e6f9ff', textDecoration: 'none', padding: '12px 24px', width: '100%', textAlign: 'center', borderRadius: '8px', fontWeight: 600, fontFamily: 'Montserrat, Segoe UI, Arial, sans-serif', fontSize: '18px', boxShadow: '0 1px 4px rgba(0,122,153,0.07)', cursor: 'pointer', position: 'relative', overflow: 'hidden', transition: 'backgroundColor 0.3s, color 0.3s, boxShadow 0.3s, transform 0.2s, letterSpacing 0.2s' }}>Notification</NavLink>
+        <NavLink to="/messages" style={{ color: '#007a99', background: '#e6f9ff', textDecoration: 'none', padding: '12px 24px', width: '100%', textAlign: 'center', borderRadius: '8px', fontWeight: 600, fontFamily: 'Montserrat, Segoe UI, Arial, sans-serif', fontSize: '18px', boxShadow: '0 1px 4px rgba(0,122,153,0.07)', cursor: 'pointer', position: 'relative', overflow: 'hidden', transition: 'backgroundColor 0.3s, color 0.3s, boxShadow 0.3s, transform 0.2s, letterSpacing 0.2s' }}>Messages</NavLink>
+        <NavLink to="/profile" style={{ color: '#007a99', background: '#e6f9ff', textDecoration: 'none', padding: '12px 24px', width: '100%', textAlign: 'center', borderRadius: '8px', fontWeight: 600, fontFamily: 'Montserrat, Segoe UI, Arial, sans-serif', fontSize: '18px', boxShadow: '0 1px 4px rgba(0,122,153,0.07)', cursor: 'pointer', position: 'relative', overflow: 'hidden', transition: 'backgroundColor 0.3s, color 0.3s, boxShadow 0.3s, transform 0.2s, letterSpacing 0.2s' }}>Profile</NavLink>
+      </div>
+      <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', borderTop: '1px solid #a7dfe8', paddingTop: '12px', background: '#fff' }}>
+        <NavLink to="/settings" style={{ color: '#007a99', background: '#e6f9ff', textDecoration: 'none', padding: '12px 24px', width: '100%', textAlign: 'center', borderRadius: '8px', fontWeight: 600, fontFamily: 'Montserrat, Segoe UI, Arial, sans-serif', fontSize: '18px', boxShadow: '0 1px 4px rgba(0,122,153,0.07)', cursor: 'pointer', position: 'relative', overflow: 'hidden', transition: 'backgroundColor 0.3s, color 0.3s, boxShadow 0.3s, transform 0.2s, letterSpacing 0.2s' }}>Settings</NavLink>
+        <NavLink to="/help" style={{ color: '#007a99', background: '#e6f9ff', textDecoration: 'none', padding: '12px 24px', width: '100%', textAlign: 'center', borderRadius: '8px', fontWeight: 600, fontFamily: 'Montserrat, Segoe UI, Arial, sans-serif', fontSize: '18px', boxShadow: '0 1px 4px rgba(0,122,153,0.07)', cursor: 'pointer', position: 'relative', overflow: 'hidden', transition: 'backgroundColor 0.3s, color 0.3s, boxShadow 0.3s, transform 0.2s, letterSpacing 0.2s' }}>Help Centre</NavLink>
+      </div>
+    </div>
+  );
+};
+
+export default Menu;
