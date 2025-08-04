@@ -5,8 +5,10 @@ import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 
+
 // Import all pages
-// import Frontpage from './pages/Frontpage'
+import Frontpage from './pages/Frontpage'
+import DemoPage from './components/DemoPage';
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 import Feed from './pages/Feed'
@@ -26,7 +28,8 @@ function App() {
     <>
       <Router>
       <Routes>
-        {/* <Route path="/" element={<Frontpage />} /> */}
+        <Route path="/" element={<Frontpage />} />
+        <Route path="/demo" element={<DemoPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/feed" element={<Feed />} />
