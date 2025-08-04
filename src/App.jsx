@@ -3,12 +3,11 @@ import { useState } from 'react'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Menu from './pages/Menu'
 
 // Import all pages
 // import Frontpage from './pages/Frontpage'
-// import Login from './pages/Login'
-// import Signup from './pages/Signup'
+import Login from './pages/Login'
+import Signup from './pages/Signup'
 // import Feed from './pages/Feed'
 // import Explore from './pages/Explore'
 import Notification from './pages/Notification'
@@ -26,11 +25,10 @@ function App() {
     <>
       <Router>
       <Routes>
-        <Route path="/" element={<Menu />} />
-        {/* <Route path="/" element={<Frontpage />} />
+        {/* <Route path="/" element={<Frontpage />} /> */}
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/feed" element={<Feed />} />
+        {/* <Route path="/feed" element={<Feed />} />
         <Route path="/explore" element={<Explore />} /> */}
         <Route path="/Notification" element={<Notification />} />
         {/* <Route path="/messages" element={<Message />} />
