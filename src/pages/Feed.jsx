@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import '../assets/styles/Feed.css';
-import clg from '../assets/styles/clg.jpeg';
-import searchIcon from '../assets/styles/search.png';
-import alertIcon from '../assets/styles/alert.png';
+import clg from '../assets/images/clg.jpeg';
+import searchIcon from '../assets/images/search.png';
+import alertIcon from '../assets/images/alert.png';
 
 const Feed = () => {
   const [rating, setRating] = useState(0);
