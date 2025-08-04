@@ -1,14 +1,15 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 // import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// import viteLogo from '/vite.svg'
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+
 
 // Import all pages
 // import Frontpage from './pages/Frontpage'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
-// import Feed from './pages/Feed'
+import Feed from './pages/Feed'
 // import Explore from './pages/Explore'
 import Notification from './pages/Notification'
 // import Message from './pages/Message'
@@ -28,8 +29,8 @@ function App() {
         {/* <Route path="/" element={<Frontpage />} /> */}
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        {/* <Route path="/feed" element={<Feed />} />
-        <Route path="/explore" element={<Explore />} /> */}
+        <Route path="/feed" element={<Feed />} />
+        {/* <Route path="/explore" element={<Explore />} /> */}
         <Route path="/Notification" element={<Notification />} />
         {/* <Route path="/messages" element={<Message />} />
         <Route path="/profile" element={<Profile />} />
