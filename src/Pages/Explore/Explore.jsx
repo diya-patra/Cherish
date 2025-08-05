@@ -1,16 +1,17 @@
 import React from 'react';
-import './Hero.css';
+import '../../assets/styles/Hero.css';
 import { FaUmbrellaBeach, FaTree, FaMountain } from 'react-icons/fa';
-import bgImage from './bg.jpg';
-import Maldives from './Maldives.jpg';
-import Mountain from './Mountain.jpg';
-import Urban from './Urban.jpg';
-import Alpine from './Alpine.jpg';
-import seaside from './seaside.jpg';
-import BeachBar from './BeachBar.jpg';
-import Santorini from './Santorini.jpg';
-import London from './London.jpg';
-import Oceanresort from './Oceanresort.jpg';
+import bgImage from '../../assets/images/bg.jpg';
+import Maldives from '../../assets/images/Maldives.jpg';
+import Mountain from '../../assets/images/Mountain.jpg';
+import Urban from '../../assets/images/Urban.jpg';
+import Alpine from '../../assets/images/Alpine.jpg';
+import seaside from '../../assets/images/seaside.jpg';
+import BeachBar from '../../assets/images/BeachBar.jpg';
+import Santorini from '../../assets/images/Santorini.jpg';
+import London from '../../assets/images/London.jpg';
+import Oceanresort from '../../assets/images/Oceanresort.jpg';
+
 const destinations = [
   {
     name: 'Maldives Paradise',
@@ -38,7 +39,7 @@ const hotels = [
     location: "Maldives",
     price: "$599/night",
     rating: "4.6★",
-    image:Oceanresort,
+    image: Oceanresort,
   },
   {
     name: "Alpine Grand Lodge",
@@ -70,7 +71,7 @@ const restaurants = [
     cuisine: "Fine Dining • French",
     rating: "4.9★",
     image: Mountain,
-    },
+  },
   {
     name: "Sunset Grill",
     tag: "Beach Bar",
@@ -88,19 +89,19 @@ const Hero = () => {
         className="hero-section"
         style={{ backgroundImage: `url(${bgImage})` }}>
         <div className="hero-overlay">
-        <div className="glass-box">
-        <div className="hero-content">
-          <h1 className="hero-title">Discover Your Perfect Vacation</h1>
-          <p>Explore breathtaking destinations from serene beaches to majestic mountains</p>
-          <button className="hero-btn">Start Exploring</button>
+          <div className="glass-box">
+            <div className="hero-content">
+              <h1 className="hero-title">Discover Your Perfect Vacation</h1>
+              <p>Explore breathtaking destinations from serene beaches to majestic mountains</p>
+              <button className="hero-btn">Start Exploring</button>
 
-          <div className="category-buttons">
-            <button className="category active"><FaUmbrellaBeach className="icon" /> Beach</button>
-            <button className="category"><FaTree className="icon" /> Forest</button>
-            <button className="category"><FaMountain className="icon" /> Mountain</button>
+              <div className="category-buttons">
+                <button className="category active"><FaUmbrellaBeach className="icon" /> Beach</button>
+                <button className="category"><FaTree className="icon" /> Forest</button>
+                <button className="category"><FaMountain className="icon" /> Mountain</button>
+              </div>
+            </div>
           </div>
-          </div>
-        </div>
         </div>
       </section>
 
@@ -123,8 +124,8 @@ const Hero = () => {
           ))}
         </div>
         <div className="view-all-wrapper">
-        <a href="#" className="view-all-btn">View All Destinations →</a>
-       </div>
+          <a href="#" className="view-all-btn">View All Destinations →</a>
+        </div>
       </section>
       {/* 🏨 Luxury Hotels */}
       <section className="luxury-hotels">
@@ -143,10 +144,10 @@ const Hero = () => {
           ))}
         </div>
         <div className="view-all-wrapper">
-        <a href="#" className="view-all-btn">View All Destinations →</a>
-       </div>
+          <a href="#" className="view-all-btn">View All Destinations →</a>
+        </div>
       </section>
-      
+
       {/* 🍽️ Vacation Restaurants */}
       <section className="restaurants">
         <h2 className="section-title">Top Vacation Restaurants</h2>
@@ -168,11 +169,11 @@ const Hero = () => {
           ))}
         </div>
         <div className="view-all-wrapper">
-        <a href="#" className="view-all-btn">View All Destinations →</a>
-       </div>
+          <a href="#" className="view-all-btn">View All Destinations →</a>
+        </div>
       </section>
     </div>
-    
+
   );
 };
 

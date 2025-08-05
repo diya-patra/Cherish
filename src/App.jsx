@@ -10,7 +10,7 @@ import DemoPage from './components/DemoPage';
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 import Feed from './pages/Feed'
-import Explore from './pages/Explore'
+import Explore from './pages/Explore/Explore'
 import Notification from './pages/Notification'
 // import Message from './pages/Message'
 // import Profile from './pages/Profile'
@@ -24,15 +24,14 @@ import Notification from './pages/Notification'
 function App() {
   return (
     <>
-    <Explore/>
-      {/* <Router>
-      <Routes>
+      <Router>
+        <Routes>
         <Route path="/" element={<Frontpage />} />
         <Route path="/demo" element={<DemoPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/feed" element={<Feed />} />
-        {/* <Route path="/explore" element={<Explore />} /> */}
+        <Route path="/explore" element={<Explore />} />
         <Route path="/Notification" element={<Notification />} />
         {/* <Route path="/messages" element={<Message />} />
         <Route path="/profile" element={<Profile />} />
@@ -42,10 +41,10 @@ function App() {
         <Route path="/settings" element={<Settings />} />
         <Route path="/help" element={<Helpcentre />} />
         <Route path="/admin" element={<Admin />} /> */}
-      </Routes>
-    </Router>
-     */}
-     </>
+        </Routes>
+      </Router>
+
+    </>
   )
 
 }
