@@ -4,15 +4,13 @@ import React, { useState } from 'react'
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-
-
 // Import all pages
 import Frontpage from './pages/Frontpage'
 import DemoPage from './components/DemoPage';
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 import Feed from './pages/Feed'
-// import Explore from './pages/Explore'
+import Explore from './pages/Explore'
 import Notification from './pages/Notification'
 // import Message from './pages/Message'
 // import Profile from './pages/Profile'
@@ -26,7 +24,8 @@ import Notification from './pages/Notification'
 function App() {
   return (
     <>
-      <Router>
+    <Explore/>
+      {/* <Router>
       <Routes>
         <Route path="/" element={<Frontpage />} />
         <Route path="/demo" element={<DemoPage />} />
@@ -45,8 +44,12 @@ function App() {
         <Route path="/admin" element={<Admin />} /> */}
       </Routes>
     </Router>
-    </>
+     */}
+     </>
   )
+
 }
 
+
 export default App
+
