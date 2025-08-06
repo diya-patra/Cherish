@@ -1,68 +1,177 @@
 .settings-container {
-    max-width: 700px;
-    margin: 2rem auto;
     padding: 2rem;
-    font-family: Arial, sans-serif;
-    background-color: #fefefe;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f5f7fa;
+    color: #1c1e21;
 }
 
-.settings-container h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
+.settings-header {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
 }
 
 .settings-section {
-    margin: 1.5rem 0;
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-.account-switch {
+.account-info {
     display: flex;
-    gap: 10px;
     align-items: center;
+    gap: 1rem;
 }
 
-.avatar {
-    width: 40px;
-    height: 40px;
-    background-color: #d55b5b;
+.profile-pic {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+
+.account-tags span {
+    background-color: #f0f2f5;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    margin-right: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.edit-profile-btn {
+    margin-top: 1rem;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.password-section label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.password-section input {
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.password-hint {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.update-password-btn {
+    margin-top: 1rem;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.settings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.settings-card {
+    background: white;
+    padding: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.connected {
+    color: green;
+}
+
+.connect {
+    color: #2563eb;
+    cursor: pointer;
+}
+
+.appearance-options {
+    margin: 0.8rem 0;
+}
+
+.theme-btn {
+    margin-right: 0.5rem;
+    border: 1px solid #ccc;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+}
+
+.theme-btn.active {
+    background-color: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+.logout-btn {
+    margin-top: 2rem;
+    background-color: #fee2e2;
+    color: #dc2626;
+    border: none;
+    padding: 0.8rem 1.6rem;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 28px;
+    margin-top: 0.6rem;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 28px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
     border-radius: 50%;
 }
 
-.more {
-    color: gray;
+input:checked+.slider {
+    background-color: #2563eb;
 }
 
-label {
-    display: block;
-    margin: 0.5rem 0;
-}
-
-input[type="password"], select {
-    width: 100%;
-    padding: 8px;
-    margin-top: 4px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    padding: 8px 16px;
-    margin-top: 10px;
-    background-color: #0066cc;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.logout {
-    background-color: #e53935;
-}
-
-.link {
-    float: right;
-    color: #007BFF;
-    cursor: pointer;
+input:checked+.slider:before {
+    transform: translateX(22px);
 }

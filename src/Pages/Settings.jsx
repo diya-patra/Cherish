@@ -1,86 +1,88 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../assets/styles/Settings.css';
 
 function Settings() {
-    const [currentPassword, setCurrentPassword] = useState('');
-    const [newPassword, setNewPassword] = useState('');
-    const [locationAllowed, setLocationAllowed] = useState(false);
-    const [theme, setTheme] = useState('Light');
-    const [fontSize, setFontSize] = useState('Medium');
-
     return (
         <div className="settings-container">
-            <h2>Settings</h2>
+            <h1 className="settings-header">Settings</h1>
 
-            <section className="settings-section">
-                <h3>Account</h3>
-                <div className="account-switch">
-                    <div className="avatar"></div>
-                    <span>ac1</span>
-                    <span>ac2</span>
-                    <span className="more">+ more</span>
+            <div className="settings-section account-section">
+                <div className="account-info">
+                    <img src="https://via.placeholder.com/80" alt="User" className="profile-pic" />
+                    <div>
+                        <h2>John Doe</h2>
+                        <p>john.doe@cherish.app</p>
+                        <div className="account-tags">
+                            <span>ac1</span>
+                            <span>ac2</span>
+                            <span>+ more</span>
+                        </div>
+                    </div>
                 </div>
-            </section>
+                <button className="edit-profile-btn">Edit Profile</button>
+            </div>
 
-            <section className="settings-section">
-                <button>Edit Profile</button>
-            </section>
+            <div className="settings-section password-section">
+                <h2>Password and Security</h2>
+                <label>Current password</label>
+                <input type="password" placeholder="Enter current password" />
+                <label>New password</label>
+                <input type="password" placeholder="Enter new password" />
+                <p className="password-hint">Password must be at least 8 characters long</p>
+                <button className="update-password-btn">Update Password</button>
+            </div>
 
-            <section className="settings-section">
-                <h3>Password and Security</h3>
-                <label>Current Password
-                    <input type="password" value={currentPassword} onChange={e => setCurrentPassword(e.target.value)} />
-                </label>
-                <label>New Password
-                    <input type="password" value={newPassword} onChange={e => setNewPassword(e.target.value)} />
-                </label>
-            </section>
+            <div className="settings-grid">
+                <div className="settings-card">
+                    <h3>Linked Accounts</h3>
+                    <p><b>Google</b> - <span className="connected">Connected</span></p>
+                    <p><b>Apple</b> - <span className="connect">Connect</span></p>
+                </div>
 
-            <section className="settings-section">
-                <h3>Linked Accounts</h3>
-                <button>Manage Linked Accounts</button>
-            </section>
+                <div className="settings-card">
+                    <h3>Saved Posts</h3>
+                    <p className="number">24</p>
+                    <a href="#">View all →</a>
+                </div>
 
-            <section className="settings-section">
-                <h3>Saved Posts <span className="link">View all</span></h3>
-            </section>
+                <div className="settings-card">
+                    <h3>Your Activity</h3>
+                    <p>Posts this month: 12</p>
+                    <p>Comments: 47</p>
+                    <p>Likes given: 186</p>
+                </div>
 
-            <section className="settings-section">
-                <h3>Your Activity</h3>
-            </section>
+                <div className="settings-card">
+                    <h3>Information & Permissions</h3>
+                    <p><a href="#">Download your data</a></p>
+                    <p><a href="#">Privacy settings</a></p>
+                </div>
 
-            <section className="settings-section">
-                <h3>Your Information & Permissions</h3>
-            </section>
+                <div className="settings-card">
+                    <h3>Location & Permissions</h3>
+                    <label className="switch">
+                        <input type="checkbox" defaultChecked />
+                        <span className="slider round"></span>
+                    </label>
+                    <p>Enable location services for better experience</p>
+                </div>
 
-            <section className="settings-section">
-                <button className="logout">Logout</button>
-            </section>
-
-            <section className="settings-section">
-                <h3>Location & Permissions</h3>
-                <label>
-                    <input type="checkbox" checked={locationAllowed} onChange={() => setLocationAllowed(!locationAllowed)} />
-                    Allow Location
-                </label>
-            </section>
-
-            <section className="settings-section">
-                <h3>Appearance</h3>
-                <label>Theme:
-                    <select value={theme} onChange={(e) => setTheme(e.target.value)}>
-                        <option>Light</option>
-                        <option>Dark</option>
-                    </select>
-                </label>
-                <label>Font Size:
-                    <select value={fontSize} onChange={(e) => setFontSize(e.target.value)}>
-                        <option>Small</option>
+                <div className="settings-card">
+                    <h3>Appearance</h3>
+                    <div className="appearance-options">
+                        <button className="theme-btn active">Light</button>
+                        <button className="theme-btn">Dark</button>
+                        <button className="theme-btn">Auto</button>
+                    </div>
+                    <select>
                         <option>Medium</option>
+                        <option>Small</option>
                         <option>Large</option>
                     </select>
-                </label>
-            </section>
+                </div>
+            </div>
+
+            <button className="logout-btn">Logout</button>
         </div>
     );
 }
