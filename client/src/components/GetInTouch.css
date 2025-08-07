@@ -1,0 +1,158 @@
+/* Light Mode Defaults */
+:root {
+  --bg-color: #f8f9fc;
+  --text-color: #0b0c22;
+  --card-bg: #ffffff;
+  --subtitle-color: #5a5a5a;
+  --input-bg: #fff;
+  --input-border: #ccc;
+  --checkbox-color: #444;
+  --btn-bg: linear-gradient(to right, #0052ff, #1e90ff);
+  --btn-bg-hover: linear-gradient(to right, #003fcc, #187bff);
+}
+
+/* Dark Mode Overrides */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #111827;
+    --text-color: #f9fafb;
+    --card-bg: #1f2937;
+    --subtitle-color: #9ca3af;
+    --input-bg: #374151;
+    --input-border: #4b5563;
+    --checkbox-color: #d1d5db;
+    --btn-bg: linear-gradient(to right, #2563eb, #3b82f6);
+    --btn-bg-hover: linear-gradient(to right, #1d4ed8, #2563eb);
+  }
+}
+
+/* Optional: If you're toggling dark mode manually with a class */
+.dark {
+  --bg-color: #111827;
+  --text-color: #f9fafb;
+  --card-bg: #1f2937;
+  --subtitle-color: #9ca3af;
+  --input-bg: #374151;
+  --input-border: #4b5563;
+  --checkbox-color: #d1d5db;
+  --btn-bg: linear-gradient(to right, #2563eb, #3b82f6);
+  --btn-bg-hover: linear-gradient(to right, #1d4ed8, #2563eb);
+}
+
+/* Main Section */
+.contact-section {
+  background-color: var(--bg-color);
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.4s ease;
+}
+
+.contact-title {
+  font-size: 4rem;
+  color: var(--text-color);
+  margin-bottom: 10px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease;
+}
+.contact-title:hover {
+  transform: scale(1.05);
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-subtitle {
+  font-size: 0.95rem;
+  color: var(--subtitle-color);
+  margin-bottom: 40px;
+  transition: transform 0.3s ease;
+}
+.contact-subtitle:hover {
+  transform: scale(1.02);
+  color: var(--text-color);
+}
+
+/* Form Card */
+.contact-form {
+  background: var(--card-bg);
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0px 20px 35px rgba(0, 0, 0, 0.08);
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+  transition: transform 0.3s ease;
+
+}
+
+.contact-form:hover {
+    transform: translateY(-5px);
+  box-shadow: 0px 25px 45px rgba(0, 0, 0, 0);
+}
+
+/* Form Inputs */
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.input {
+  padding: 12px 15px;
+  font-size: 0.95rem;
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 8px;
+  width: 100%;
+  color: var(--text-color);
+  transition: border 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  transform: scale(1.02);
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+textarea {
+  resize: none;
+}
+
+.form-label {
+  text-align: left;
+  display: block;
+  margin: 5px 0 5px 3px;
+  font-size: 0.85rem;
+  color: var(--text-color);
+}
+
+.checkbox-container {
+  font-size: 0.85rem;
+  color: var(--checkbox-color);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 15px 0 25px;
+}
+
+/* Submit Button */
+.submit-btn {
+  background: var(--btn-bg);
+  border: none;
+  padding: 12px 20px;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.4s ease, transform 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: var(--btn-bg-hover);
+  transform: scale(1.05);
+}
