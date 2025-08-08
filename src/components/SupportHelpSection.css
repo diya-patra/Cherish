@@ -1,0 +1,231 @@
+/* ---------- GENERAL SUPPORT SECTION ---------- */
+.support-help-section {
+  width: 100%;
+  padding: 50px 80px;
+  background: linear-gradient(135deg, #f6b100, #ff9100);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  box-sizing: border-box;
+  transition: all 0.4s ease-in-out;
+  flex-wrap: wrap;
+}
+
+.support-left {
+  max-width: 500px;
+  animation: fadeInLeft 0.7s ease-in;
+}
+
+.support-left h3 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 2px #b96e00;
+}
+
+.support-left p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* ---------- BUTTONS ---------- */
+.support-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.support-btn {
+  background-color: white;
+  border: none;
+  color: #f3a000;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.support-btn:hover {
+  background-color: #ffe7b3;
+  transform: scale(1.08);
+}
+
+/* ---------- CHAT BOX ---------- */
+.chat-box {
+  background-color: #ffffff;
+  color: #333;
+  width: 320px;
+  max-height: 450px;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 12px;
+  max-height: 320px;
+  padding-right: 5px;
+  scroll-behavior: smooth;
+}
+
+.message {
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.user-msg {
+  text-align: right;
+  color: #f3a000;
+  font-weight: bold;
+}
+
+.support-msg {
+  text-align: left;
+  color: #444;
+}
+
+.chat-input {
+  display: flex;
+  gap: 8px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  transition: all 0.2s ease-in-out;
+}
+
+.chat-input input:focus {
+  border-color: #f3a000;
+  outline: none;
+  box-shadow: 0 0 6px rgba(243, 160, 0, 0.4);
+}
+
+.chat-input button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #f3a000;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.chat-input button:hover {
+  background-color: #cc8500;
+}
+
+/* ---------- CONTACT SUPPORT PAGE ---------- */
+.contact-support-container {
+  padding: 60px 80px;
+  background: linear-gradient(to top right, #fff8e1, #ffeccc);
+  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+  animation: fadeIn 0.6s ease-in;
+}
+
+.contact-support-container h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #f3a000;
+  text-shadow: 1px 1px 2px #d68600;
+}
+
+.contact-support-container p {
+  margin-bottom: 30px;
+  font-size: 17px;
+  color: #444;
+}
+
+.contact-support-form {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contact-support-form label {
+  font-weight: bold;
+  color: #222;
+}
+
+.contact-support-form input,
+.contact-support-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+.contact-support-form input:focus,
+.contact-support-form textarea:focus {
+  border-color: #f3a000;
+  outline: none;
+  box-shadow: 0 0 8px rgba(243, 160, 0, 0.3);
+}
+
+.contact-support-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-support-form button {
+  align-self: flex-start;
+  padding: 12px 24px;
+  background-color: #f3a000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-support-form button:hover {
+  background-color: #cc8500;
+  transform: scale(1.05);
+}
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

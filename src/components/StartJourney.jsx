@@ -16,9 +16,6 @@ const StartJourney = () => {
           <button className="btn orange-btn">
             <FaUserPlus className="btn-icon" /> Create Free Account
           </button>
-          <button className="btn white-btn">
-            <BsDownload className="btn-icon" /> Download App
-          </button>
         </div>
       </div>
     </section>

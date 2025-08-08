@@ -1,0 +1,141 @@
+/* Wrapper Section */
+.photo-video-wrapper {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 40px;
+  background-color: #f9fbfd;
+}
+
+/* Title with Camera Icon */
+.photo-video-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #101828;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+.photo-video-title:hover {
+  transform: translateY(-2px);
+}
+
+.camera-icon {
+  color: #12b76a;
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.camera-icon:hover {
+  transform: scale(1.2);
+}
+
+/* White Card Layout */
+.photo-video-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.photo-video-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Left Side: Text Content */
+.photo-video-left {
+  flex: 1;
+  padding-right: 30px;
+}
+
+.photo-video-heading {
+  font-size: 16px;
+  color: #101828;
+  margin-bottom: 24px;
+}
+
+.photo-video-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.photo-video-features li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.photo-video-features li:hover {
+  transform: translateX(5px);
+}
+
+.tick-icon {
+  color: #12b76a;
+  font-size: 20px;
+  margin-right: 12px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.photo-video-features strong {
+  color: #101828;
+  font-size: 14px;
+}
+
+.photo-video-features p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #667085;
+}
+
+/* Green Button */
+.photo-video-button {
+  margin-top: 16px;
+  padding: 10px 20px;
+  background-color: #12b76a;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.photo-video-button:hover {
+  background-color: #0e9e5a;
+  transform: scale(1.05);
+}
+
+/* Right Side: Image Display */
+.photo-video-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.features-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.features-image img {
+  max-width: 400px; /* Increased size */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.features-image img:hover {
+  transform: scale(1.05);
+}

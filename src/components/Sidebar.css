@@ -1,0 +1,104 @@
+.sidebar {
+  width: 250px;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-top: 20px;
+  height: fit-content;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 90px; /* Adjust based on navbar height */
+  transition: transform 0.4s ease, opacity 0.4s ease; /* Slide-in effect */
+  transform: translateX(0);
+  opacity: 1;
+}
+.sidebar-title {
+  font-size: 1.10rem;
+  display: inline-block;
+  font-weight: 700;
+  color: #11141a;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  text-align: left;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.sidebar-title:hover {
+  transform: translateX(5px);
+  color: #34a68d;
+}
+
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: left;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #374151;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar-item:hover {
+  background-color: #f3f4f6;
+  color: #0ea5e9;
+}
+
+.sidebar-item.active {
+  background-color: #e0f2fe;
+  color: #0ea5e9;
+  font-weight: 600;
+}
+
+.sidebar-icon {
+  margin-right: 0.75rem;
+  font-size: 1rem;
+}
+
+.quick-actions {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.quick-action-button {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  font-size: 0.9rem;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.quick-action-button:hover {
+  background-color: #f3f4f6;
+}
+.quick-action-button.active {
+  background-color: #e0f2fe;
+  color: #0ea5e9;
+  font-weight: 600;
+}
+.quick-actions-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #6b7280;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+
+.quick-action-icon {
+  margin-right: 0.5rem;
+}

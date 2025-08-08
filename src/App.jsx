@@ -20,7 +20,7 @@ import Notification from './pages/Notification'
 // import Story from './pages/Story'
 // import Viewstory from './pages/Viewstory'
 // import Settings from './pages/Settings'
-// import Helpcentre from './pages/Helpcentre'
+import Helpcentre from './pages/Helpcentre'
 // import Admin from './pages/Admin'
 
 function App() {
@@ -41,8 +41,8 @@ function App() {
         <Route path="/story" element={<Story />} />
         <Route path="/viewstory" element={<Viewstory />} />
         <Route path="/settings" element={<Settings />} />
-        <Route path="/help" element={<Helpcentre />} />
         <Route path="/admin" element={<Admin />} /> */}
+        <Route path="/Helpcentre" element={<Helpcentre />} />
       </Routes>
     </Router>
     </>

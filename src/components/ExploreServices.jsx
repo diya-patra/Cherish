@@ -1,6 +1,6 @@
 import React from "react";
 import "./ExploreServices.css";
-import cameraImg from "../assets/camera.jpg";
+import cameraImg from "../assets/Srijayeeimages/camera.jpg";
 import resortImg from "../assets/resort.jpg";
 
 const ExploreServices = () => {

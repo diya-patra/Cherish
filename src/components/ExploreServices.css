@@ -21,7 +21,7 @@
 }
 
 .explore-section > p {
-  margin-top: -15px;
+  margin-top: 10px;
   font-size: 17px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #657194;
@@ -127,11 +127,11 @@
   position: relative;
   display: inline-block;
   transform-style: preserve-3d;
-  perspective: 1000px;
+  perspective: 800px;
 }
 
 .img-right {
-  width: 100%;
+  width: 80%;
   border-radius: 12px;
   display: block;
 }
