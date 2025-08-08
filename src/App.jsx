@@ -5,11 +5,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 
 
+
 // Import all pages
 // import Frontpage from './pages/Frontpage'
 // import Login from './pages/Login'
 // import Signup from './pages/Signup'
 import Feed from './pages/feed.jsx'
+import Footer from './pages/Footer.jsx'
 // import Explore from './pages/Explore'
 // import Notification from './pages/Notification'
 // import Message from './pages/Message'
@@ -30,6 +32,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} /> */}
         <Route path="/" element={<Feed />} />
+        
         {/* <Route path="/explore" element={<Explore />} />
         <Route path="/notifications" element={<Notification />} />
         <Route path="/messages" element={<Message />} />
@@ -42,6 +45,7 @@ function App() {
         <Route path="/admin" element={<Admin />} /> */}
       </Routes>
     </Router>
+    <Footer/>
     </>
   )
 }

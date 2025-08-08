@@ -258,10 +258,8 @@ const postImages = [pic];
       <button className="follow-btn">Follow</button>
     </div>
   </div>
+  
 </div>
-
-
-
  </>  
   );
   
