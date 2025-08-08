@@ -16,10 +16,32 @@ body, html {
   min-height: 100vh;
 }
 
+/* 🔥 Keyframe Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /* 🔥 Hero Section */
 .hero-section {
-  background-size: cover;         /* Ensures full coverage */
-  background-position: left center; /* Starts from the left */
+  background-attachment: fixed; /* 💥 This line does the parallax magic */
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
   width: 100vw;
@@ -28,11 +50,11 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: fadeIn 1s ease forwards;
 }
 
-
 .hero-overlay {
-  background: rgba(0, 0, 0, 0.4); /* Darken background for readability */
+  background: rgba(0, 0, 0, 0.4);
   position: absolute;
   top: 0;
   left: 0;
@@ -42,10 +64,11 @@ body, html {
   align-items: center;
   justify-content: center;
 }
+
 .glass-box {
-  backdrop-filter: blur(10px); /* 👈 creates blur effect */
-  background-color: rgba(160, 160, 160, 0.004); /* semi-transparent */
-  border: rgba(160, 160, 160, 0.004) solid 1px; /* subtle border */
+  backdrop-filter: blur(10px);
+  background-color: rgba(160, 160, 160, 0.004);
+  border: rgba(160, 160, 160, 0.004) solid 1px;
   border-radius: 10px;
   padding: 30px;
   max-width: 850px;
@@ -53,7 +76,6 @@ body, html {
   z-index: 2;
   box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
 }
-
 
 .hero-content {
   color: white;
@@ -64,10 +86,31 @@ body, html {
   margin: 0 auto;
 }
 
+/* 🧨 Heading Animation */
 .hero-title {
   font-size: 3.5rem;
   font-weight: bold;
   margin-bottom: 20px;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+.hero-subtitle {
+  font-size: 1.4rem;
+  color: #dddddd;
+  margin-top: 15px;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+.hero-description {
+  font-size: 1.1rem;
+  color: #cccccc;
+  margin-top: 10px;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.7s;
+  opacity: 0;
 }
 
 .hero-btn {
@@ -80,11 +123,12 @@ body, html {
   margin-top: 25px;
   cursor: pointer;
   font-size: 1.1rem;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .hero-btn:hover {
   background-color: #f0f0f0;
+  transform: scale(1.05);
 }
 
 .category-buttons {
@@ -106,26 +150,26 @@ body, html {
   background: rgba(255, 255, 255, 0.2);
   color: white;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .category.active,
 .category:hover {
   background: #007bff;
   color: white;
+  transform: scale(1.05);
 }
-
 
 .category-buttons {
   margin-top: 30px;
 }
-
 
 /* ✨ Featured Destinations Section */
 .featured-section {
   padding: 60px 30px;
   background: #f2f2f2;
   text-align: center;
+  animation: fadeIn 1s ease forwards;
 }
 
 .featured-section h2 {
@@ -144,11 +188,19 @@ body, html {
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 6px 20px rgba(214, 122, 122, 0.1);
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
 }
 
+.card:nth-child(1) { animation-delay: 0.2s; }
+.card:nth-child(2) { animation-delay: 0.4s; }
+.card:nth-child(3) { animation-delay: 0.6s; }
+.card:nth-child(4) { animation-delay: 0.8s; }
+
 .card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
 }
 
 .card-image {
@@ -205,6 +257,7 @@ body, html {
   padding: 60px 30px;
   background: #ffffff;
   text-align: center;
+  animation: fadeIn 1s ease forwards;
 }
 
 .luxury-hotels .section-title {
@@ -223,11 +276,18 @@ body, html {
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
 }
 
+.hotel-card:nth-child(1) { animation-delay: 0.2s; }
+.hotel-card:nth-child(2) { animation-delay: 0.4s; }
+.hotel-card:nth-child(3) { animation-delay: 0.6s; }
+
 .hotel-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .hotel-card img {
@@ -268,9 +328,9 @@ body, html {
 }
 
 /* 🍴 Restaurant Section */
-/* Restaurant Cards */
 .restaurants {
   padding: 60px 20px;
+  animation: fadeIn 1s ease forwards;
 }
 
 .restaurant-cards {
@@ -279,6 +339,15 @@ body, html {
   gap: 30px;
   margin-top: 30px;
 }
+
+.restaurant-cards .card {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.restaurant-cards .card:nth-child(1) { animation-delay: 0.2s; }
+.restaurant-cards .card:nth-child(2) { animation-delay: 0.4s; }
+.restaurant-cards .card:nth-child(3) { animation-delay: 0.6s; }
 
 .card-image-container {
   position: relative;
@@ -310,7 +379,6 @@ body, html {
   font-weight: bold;
   color: #8a9ad0;
 }
-
 
 /* 🪄 Responsive Fixes */
 @media (max-width: 768px) {

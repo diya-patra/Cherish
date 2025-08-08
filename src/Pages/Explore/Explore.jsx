@@ -1,5 +1,5 @@
 import React from 'react';
-import './Hero.css';
+import '../../assets/styles/Hero.css';
 import { FaUmbrellaBeach, FaTree, FaMountain } from 'react-icons/fa';
 import bgImage from './bg.jpg';
 import Maldives from './Maldives.jpg';
